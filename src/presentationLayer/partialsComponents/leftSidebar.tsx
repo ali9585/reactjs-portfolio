@@ -11,7 +11,7 @@ export const LeftSidebar: React.FC = (): JSX.Element => {
                 <div className='flex justify-between'>
                     <h2 className='logo'>Drake</h2>
                     <span className='title'>
-                        Full Stack
+                        Full Stacks
                         <br />
                         Developer
                     </span>
