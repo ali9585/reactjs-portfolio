@@ -3,9 +3,15 @@ import { SectionBadge } from "../../../utils/sectionBadge";
 import { GoArrowDown } from "react-icons/go";
 import { motion } from 'framer-motion';
 import { UseIntroductionVariants } from '../../../../domainLayer/framerVariants/introduction/useIntroductionVariants';
+import { usePageSectionController } from "../../../../appLayer/utils/usePageSectionController";
 
 const Introduction: React.FC = (): JSX.Element => {
     const framerVariants = UseIntroductionVariants();
+    const pageSectionController = usePageSectionController();
+
+    const scrollToProjects = () => {
+        pageSectionController.updateSection(5);
+    }
 
     return (
         <>
@@ -23,7 +29,7 @@ const Introduction: React.FC = (): JSX.Element => {
                         I design and code beautifully simple things and i love what i do. Just simple like that!
                     </p>
                     <div className='point-to-projects'>
-                        <div className='spinner'>
+                        <div className='spinner' onClick={scrollToProjects}>
                             <motion.div variants={framerVariants.spinnerVariants} initial='intial' animate='rotate'>
                                 <img alt='projects' src={require('../../../assets/images/round-text.png')} />
                             </motion.div>
