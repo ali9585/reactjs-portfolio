@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import {
     AiOutlineHome,
     AiOutlineUser,
@@ -12,6 +12,41 @@ import { LiaCommentSolid } from "react-icons/lia";
 
 export const RightMenu: React.FC = (): JSX.Element => {
     const [isVisible, setIsVisible] = useState<boolean>(false);
+
+    const links = [
+        {
+            label: 'Home',
+            icon: <AiOutlineHome size={19} color='#999999' />
+        },
+        {
+            label: 'About',
+            icon: <AiOutlineUser size={19} color='#999999' />
+        },
+        {
+            label: 'Resume',
+            icon: <AiOutlineContainer size={18} color='#999999' />
+        },
+        {
+            label: 'Services',
+            icon: <AiOutlineAlignRight size={18} color='#999999' />
+        },
+        {
+            label: 'Skills',
+            icon: <AiOutlineMan size={18} color='#999999' />
+        },
+        {
+            label: 'Portfolio',
+            icon: <AiOutlineLaptop size={18} color='#999999' />
+        },
+        {
+            label: 'Testimonial',
+            icon: <LiaCommentSolid size={18} color='#999999' />
+        },
+        {
+            label: 'Contact',
+            icon: <AiOutlineMail size={18} color='#999999' />
+        },
+    ]
 
     return (
         <>
@@ -27,38 +62,12 @@ export const RightMenu: React.FC = (): JSX.Element => {
                                 <div className="menu">
                                     <p>Menu</p>
                                     <ul>
-                                        <li>
-                                            <AiOutlineHome size={19} color='#999999' />
-                                            <span style={{ color: '#999999' }}>Home</span>
-                                        </li>
-                                        <li>
-                                            <AiOutlineUser size={19} color='#999999' />
-                                            <span style={{ color: '#999999' }}>About</span>
-                                        </li>
-                                        <li>
-                                            <AiOutlineContainer size={18} color='#999999' />
-                                            <span style={{ color: '#999999' }}>Resume</span>
-                                        </li>
-                                        <li>
-                                            <AiOutlineAlignRight size={18} color='#999999' />
-                                            <span style={{ color: '#999999' }}>Services</span>
-                                        </li>
-                                        <li>
-                                            <AiOutlineMan size={18} color='#999999' />
-                                            <span style={{ color: '#999999' }}>Skills</span>
-                                        </li>
-                                        <li>
-                                            <AiOutlineLaptop size={18} color='#999999' />
-                                            <span style={{ color: '#999999' }}>Portfolio</span>
-                                        </li>
-                                        <li>
-                                            <LiaCommentSolid size={18} color='#999999' />
-                                            <span style={{ color: '#999999' }}>Testimonial</span>
-                                        </li>
-                                        <li>
-                                            <AiOutlineMail size={18} color='#999999' />
-                                            <span style={{ color: '#999999' }}>Contact</span>
-                                        </li>
+                                        {links.map((link, index) => (
+                                            <li key={index}>
+                                                {link.icon}
+                                                <span style={{ color: '#999999' }}>{link.label}</span>
+                                            </li>
+                                        ))}
                                     </ul>
                                 </div>
                             </div>

@@ -2,7 +2,7 @@ import { LiaHomeSolid } from "react-icons/lia";
 import { SectionBadge } from "../../../utils/sectionBadge";
 import { GoArrowDown } from "react-icons/go";
 import { motion } from 'framer-motion';
-import { UseIntroductionVariants } from '../../../../domainLayer/framerVariants/introduction/useIntroductionVariants';
+import { UseIntroductionVariants } from '../../../framerVariants/introduction/useIntroductionVariants';
 import { usePageSectionController } from "../../../../appLayer/utils/usePageSectionController";
 
 const Introduction: React.FC = (): JSX.Element => {

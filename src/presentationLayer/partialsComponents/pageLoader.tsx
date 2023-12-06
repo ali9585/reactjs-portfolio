@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import { UsePageLoaderVariants } from '../../domainLayer/framerVariants/pageLoader/useLoaderVariants';
+import { UsePageLoaderVariants } from '../framerVariants/pageLoader/useLoaderVariants';
 
 interface PageLoaderProps {
     isLoaded: boolean
