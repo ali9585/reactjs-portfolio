@@ -13,6 +13,7 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Inter', sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -897,7 +898,7 @@ body::-webkit-scrollbar-thumb:hover {
     background-color: #191919;
     padding-top: 50px;
     transition: all 0.3s;
-    z-index: 3;
+    z-index: 6;
 }
 
 .right-menu .menu-wrapper .menu {
