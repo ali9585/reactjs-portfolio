@@ -1,9 +1,9 @@
 import { LiaHomeSolid } from "react-icons/lia";
-import { SectionBadge } from "../../../utils/sectionBadge";
+import { SectionBadge } from "../../../utilComponents/sectionBadge";
 import { GoArrowDown } from "react-icons/go";
 import { motion } from 'framer-motion';
 import { UseIntroductionVariants } from '../../../framerVariants/introduction/useIntroductionVariants';
-import { usePageSectionController } from "../../../../appLayer/utils/usePageSectionController";
+import { usePageSectionController } from "../../../utils/usePageSectionController";
 
 const Introduction: React.FC = (): JSX.Element => {
     const framerVariants = UseIntroductionVariants();
@@ -15,7 +15,7 @@ const Introduction: React.FC = (): JSX.Element => {
 
     return (
         <>
-            <div className='introduction'>
+            <div className='introduction section'>
                 <motion.div variants={framerVariants.sectionVariants} initial='initial' animate='slideUp'>
                     <div>
                         <SectionBadge title='Introduce' icon={<LiaHomeSolid className='icon' size={15} color='#fff' />} />

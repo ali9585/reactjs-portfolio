@@ -1,10 +1,10 @@
-import { SectionBadge } from "../../../utils/sectionBadge";
+import { SectionBadge } from "../../../utilComponents/sectionBadge";
 import { FaDollarSign } from "react-icons/fa6";
 
 const Pricing: React.FC = (): JSX.Element => {
     return (
         <>
-            <div className="pricing">
+            <div className="pricing section">
                 <SectionBadge title="Pricing" icon={<FaDollarSign className='icon' size={13} color='#fff' />} />
                 <h1 className="section-title">
                     My <span>Pricing</span>

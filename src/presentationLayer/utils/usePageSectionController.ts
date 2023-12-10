@@ -1,6 +1,6 @@
-import { RootState } from '../../presentationLayer/redux/store/store';
+import { RootState } from '../redux/store/store';
 import { useSelector, useDispatch } from 'react-redux';
-import redux from '../../presentationLayer/redux/actions/actions';
+import redux from '../redux/actions/actions';
 
 interface ReturnedData {
     updateSection: (index: number) => void,

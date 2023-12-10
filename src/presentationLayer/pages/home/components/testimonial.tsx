@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import { SectionBadge } from "../../../utils/sectionBadge";
+import { SectionBadge } from "../../../utilComponents/sectionBadge";
 import { LiaCommentSolid } from "react-icons/lia";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { AnimateWhileInView } from "../../../utilComponents/animateWhileInView";
 
 interface Testimonial {
     clientName: string,
@@ -54,48 +55,56 @@ const Testimonial: React.FC = (): JSX.Element => {
 
     return (
         <>
-            <div className="testimonial">
-                <SectionBadge title='Testimonial' icon={<LiaCommentSolid className='icon' size={15} color='#fff' />} />
-                <h1 className="section-title">
-                    Trusted by <span>Hundered Clients</span>
-                </h1>
-                <div className="slider">
-                    <Carousel
-                        swipeable={true}
-                        emulateTouch={true}
-                        showArrows={false}
-                        showIndicators={false}
-                        showStatus={false}
-                        showThumbs={false}
-                        selectedItem={selectedItem}
-                        onChange={(current) => setSelectedItem(current)}
-                    >
-                        {testimonials?.map((item, index) => (
-                            <div className="item flex flex-col items-start" key={index}>
-                                <div className="author flex items-center gap-[16px]">
-                                    <img src={item.image} alt="" />
-                                    <div>
-                                        <h3>{item.clientName}</h3>
-                                        <p dangerouslySetInnerHTML={{ __html: item.clientTitle }} />
+            <div className="testimonial section">
+                <AnimateWhileInView>
+                    <SectionBadge title='Testimonial' icon={<LiaCommentSolid className='icon' size={15} color='#fff' />} />
+                </AnimateWhileInView>
+                <AnimateWhileInView>
+                    <h1 className="section-title">
+                        Trusted by <span>Hundered Clients</span>
+                    </h1>
+                </AnimateWhileInView>
+                <AnimateWhileInView>
+                    <div className="slider">
+                        <Carousel
+                            swipeable={true}
+                            emulateTouch={true}
+                            showArrows={false}
+                            showIndicators={false}
+                            showStatus={false}
+                            showThumbs={false}
+                            selectedItem={selectedItem}
+                            onChange={(current) => setSelectedItem(current)}
+                        >
+                            {testimonials?.map((item, index) => (
+                                <div className="item flex flex-col items-start" key={index}>
+                                    <div className="author flex items-center gap-[16px]">
+                                        <img src={item.image} alt="" />
+                                        <div>
+                                            <h3>{item.clientName}</h3>
+                                            <p dangerouslySetInnerHTML={{ __html: item.clientTitle }} />
+                                        </div>
                                     </div>
+                                    <p className="review">{item.message}</p>
+                                    <span className="project">Project</span>
                                 </div>
-                                <p className="review">{item.message}</p>
-                                <span className="project">Project</span>
-                            </div>
-                        ))}
-                    </Carousel>
-                </div>
-                <div className="arrows">
-                    <button className="prev" onClick={handlePrevItemChange}>
-                        <FaAngleLeft size={18} color='#fff' />
-                    </button>
-                    <div className="count">
-                        <span>{selectedItem + 1}</span> / {testimonials?.length}
+                            ))}
+                        </Carousel>
                     </div>
-                    <button className="next" onClick={handlenextItemChange}>
-                        <FaAngleRight size={18} color='#fff' />
-                    </button>
-                </div>
+                </AnimateWhileInView>
+                <AnimateWhileInView>
+                    <div className="arrows">
+                        <button className="prev" onClick={handlePrevItemChange}>
+                            <FaAngleLeft size={18} color='#fff' />
+                        </button>
+                        <div className="count">
+                            <span>{selectedItem + 1}</span> / {testimonials?.length}
+                        </div>
+                        <button className="next" onClick={handlenextItemChange}>
+                            <FaAngleRight size={18} color='#fff' />
+                        </button>
+                    </div>
+                </AnimateWhileInView>
             </div>
         </>
     );

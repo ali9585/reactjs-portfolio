@@ -11,7 +11,7 @@ import { LeftSidebar } from '../../partialsComponents/leftSidebar';
 import { RightSideBar } from '../../partialsComponents/rightSiderbar';
 import { RightMenu } from '../../partialsComponents/rightMenu';
 import { PageLoader } from '../../partialsComponents/pageLoader';
-import { usePageSectionController } from '../../../appLayer/utils/usePageSectionController';
+import { usePageSectionController } from '../../utils/usePageSectionController';
 import { InView } from 'react-intersection-observer';
 import { RootState } from '../../redux/store/store';
 import { useSelector } from 'react-redux';

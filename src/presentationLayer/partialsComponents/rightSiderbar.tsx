@@ -8,7 +8,7 @@ import {
     AiOutlineMail
 } from "react-icons/ai";
 import { LiaCommentSolid } from "react-icons/lia";
-import { usePageSectionController } from "../../appLayer/utils/usePageSectionController";
+import { usePageSectionController } from "../utils/usePageSectionController";
 import { RootState } from "../redux/store/store";
 import { useSelector } from 'react-redux';
 
