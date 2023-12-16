@@ -1383,3 +1383,9 @@ body::-webkit-scrollbar-thumb:hover {
         height: 38px;
     }
 }
+
+@media (max-width: 425px) {
+    .right-menu .menu-wrapper {
+        max-width: 300px;
+    }
+}
