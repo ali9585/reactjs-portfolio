@@ -16,6 +16,10 @@
     font-family: 'Inter', sans-serif;
 }
 
+body {
+    background-color: var(--app-bg-color);
+}
+
 body::-webkit-scrollbar {
     display: none;
 }
